@@ -31,7 +31,7 @@ public class IndexController {
 //    //注册页面
 //    @RequestMapping("/register")
 //    public String register(){
-//        return "register"; //跳转的界面
+//        return "register"; //跳转的界面hhh
 //    }
     //登录方法
     @RequestMapping("/addlogin")
