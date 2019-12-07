@@ -9,5 +9,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update  #      保留原来值
-#          ddl-auto: create #不保留原来数据
+      naming:
+        physical-strategy=org:
+          hibernate:
+            boot:
+              model:
+                naming:
+                  PhysicalNamingStrategyStandardImpl
     show-sql: true

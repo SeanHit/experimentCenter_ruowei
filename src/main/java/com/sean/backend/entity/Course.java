@@ -1,84 +1,57 @@
 package com.sean.backend.entity;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Date;
 
 @Entity(name="course")
 public class Course {
-    @Id //主键
-    private String id;
 
+    @Id //主键
+    @GeneratedValue(strategy = GenerationType.AUTO) //自动增长
+    private int csid;
+
+    @Column(nullable = false,length = 30)
     private String name;
 
-    private Float point;
+    @Column(name = "cs_no",nullable = false,length = 30)
+    private String csNo;
 
-    private String teacherid;
+    @Column(name="cs_name",nullable = false,length = 30)
+    private String csName;
 
-    public Course(){
-    }
+    private String cs_college;
 
-//    @ManyToOne
-//    @JoinColumn(name ="teacher_id")
-//    private Teacher teacher;
+    @Column(nullable = false)
+    private int cs_hour;
 
-//    public Teacher getTeacher() {
-//        return teacher;
-//    }
-//
-//    public void setTeacher(Teacher teacher) {
-//        this.teacher = teacher;
-//    }
-
-//    @OneToMany(cascade = CascadeType.ALL,mappedBy = "course")
-//    private Set<Student_course> student_courses = new HashSet<Student_course>();
-
-//    public Set<Student_course> getStudent_courses() {
-//        return student_courses;
-//    }
-
-//    public void setStudent_courses(Set<Student_course> student_courses) {
-//        this.student_courses = student_courses;
-//    }
-
-    public String getName() {
-        return name;
-    }
-
-//    public String getTeacher_id() {
-//        return teacher_id;
-//    }
-
-    public Float getPoint() {
-        return point;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-//    public void setTeacher_id(String teacher_id) {
-//        this.teacher_id = teacher_id;
-//    }
+    @Column(nullable = false)
+    private int cs_key;
 
 
-    public String getTeacherid() {
-        return teacherid;
-    }
+    private int semid;   //外键
 
-    public void setTeacherid(String teacherid) {
-        this.teacherid = teacherid;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    @Column(nullable = false)
+    private String cs_category;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String cs_enviroment;
 
-    public void setPoint(Float point) {
-        this.point = point;
-    }
+    @Column(length = 30, nullable = false)
+    private String cs_flag;
+
+    @Column(length = 30)
+    private String stu_monitor;
+
+    private String mon_tel;  //班长电话
+
+    @Column(columnDefinition = "text")
+    private String extea_info;
+
+    @Column(nullable = false,columnDefinition = "datetime")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date create_time;  //创建时间
+
+    private Teacher teacher;
+    public Course(){}
+
 }
