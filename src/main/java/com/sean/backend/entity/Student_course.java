@@ -2,7 +2,7 @@ package com.sean.backend.entity;
 //安于道和
 
 
-import javax.persistence.*;
+        import javax.persistence.*;
 
 @Entity(name="student_course")
 public class Student_course {

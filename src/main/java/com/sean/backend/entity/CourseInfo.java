@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 public class CourseInfo implements Serializable {
 
+
     private  String studentid;
 
     private String courseName;

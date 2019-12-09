@@ -51,7 +51,7 @@ public class Course {
     @Temporal(TemporalType.TIMESTAMP)
     private Date create_time;  //创建时间
 
-    private Teacher teacher;
+//    private Teacher teacher;
     public Course(){}
 
 }

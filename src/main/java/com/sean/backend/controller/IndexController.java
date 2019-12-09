@@ -38,8 +38,8 @@ public class IndexController {
     public String login(HttpServletRequest request){
         String id = request.getParameter("username");
         String password = request.getParameter("password");
-        Student student =studentDao.findByIdAndAndPassword(id,password);
 
+        Student student =studentDao.findByIdAndAndPassword(id,password);
         String str = "";
         if (student !=null){
             str = "index";
@@ -52,6 +52,7 @@ public class IndexController {
             str = "login";
         }
         return str;
+
     }
 
     //登录页面
