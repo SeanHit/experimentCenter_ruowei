@@ -3,7 +3,7 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://cdb-5k0j8utk.bj.tencentcdb.com:10176/dbbackend?serverTimezone=UTC
+    url: jdbc:mysql://cdb-5k0j8utk.bj.tencentcdb.com:10176/hibernateTest?serverTimezone=UTC
     username: root
     password: root@ruowei
   jpa:
