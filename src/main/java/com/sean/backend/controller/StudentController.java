@@ -9,24 +9,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 //import net.sf.json.JSONObject;
-@Controller
-@ResponseBody
-public class StudentController {
-    @Autowired
-    private TestDao testDao;
+//@Controller
+//@ResponseBody
+//public class StudentController {
+//    @Autowired
+//    private TestDao testDao;
 
 //    @Autowired
 //    private Student_courseDao student_courseDao;
 
 
-
-    @RequestMapping(value = "/front")
-    public String StudentFindOne(){
-        //RolePriv rolePriv;
-
-        //JSONObject json = JSONObject.fromObject();
-        return testDao.findById(1).getRole().getName().toString();
-    }
+//
+//    @RequestMapping(value = "/front")
+//    public String StudentFindOne(){
+//        //RolePriv rolePriv;
+//
+//        //JSONObject json = JSONObject.fromObject();
+//        return testDao.findById(1).getRole().getName().toString();
+//    }
 //
 //    @GetMapping(value = "/course")
 //    public String CourseFind(HttpServletRequest request){
@@ -72,4 +72,4 @@ public class StudentController {
 ////    public List<CourseInfo> girlFindOne(@PathVariable("id") String id){
 ////        return studentDao.findUserInfo(id);
 ////    }
-}
+//}
