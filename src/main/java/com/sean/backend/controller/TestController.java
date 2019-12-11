@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import javax.annotation.Resource;
+
 @Controller
 @ResponseBody
 public class TestController {
 
-    @Autowired
+    @Resource
     private TestDao testDao;
 
 
