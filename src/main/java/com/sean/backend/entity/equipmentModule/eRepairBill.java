@@ -1,15 +1,15 @@
-package com.sean.backend.entity.EquipmentModule;
+package com.sean.backend.entity.equipmentModule;
 
-import com.sean.backend.entity.UserModule.Admin;
-import com.sean.backend.entity.UserModule.Leader;
-import com.sean.backend.entity.equipmentModule.Equipment;
+import com.sean.backend.entity.userModule.Admin;
+import com.sean.backend.entity.userModule.Leader;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
-@Entity(name="RepairBill")
-public class RepairBill implements Serializable {
+@Entity(name="eRepairBill")
+public class eRepairBill implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +22,8 @@ public class RepairBill implements Serializable {
     @ManyToOne
     @JoinColumn(name="adminid")
     private Admin admin;
-    private DateTime applyTime;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date applyTime;
     private String applyManExtrainfo;
     @ManyToOne(cascade = CascadeType.ALL, optional = false)
     @JoinColumn(name="leaderid")
@@ -36,7 +37,8 @@ public class RepairBill implements Serializable {
     private String solution;
     private String repairMan;
     private String repairManExtrainfo;
-    private DateTime repairDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date repairDate;
     private String tel;
     private int cost;
     private String replyInfo;
@@ -90,13 +92,7 @@ public class RepairBill implements Serializable {
         this.admin = admin;
     }
 
-    public DateTime getApplyTime() {
-        return applyTime;
-    }
 
-    public void setApplyTime(DateTime applyTime) {
-        this.applyTime = applyTime;
-    }
 
     public String getApplyManExtrainfo() {
         return applyManExtrainfo;
@@ -154,11 +150,19 @@ public class RepairBill implements Serializable {
         this.repairManExtrainfo = repairManExtrainfo;
     }
 
-    public DateTime getRepairDate() {
+    public Date getApplyTime() {
+        return applyTime;
+    }
+
+    public void setApplyTime(Date applyTime) {
+        this.applyTime = applyTime;
+    }
+
+    public Date getRepairDate() {
         return repairDate;
     }
 
-    public void setRepairDate(DateTime repairDate) {
+    public void setRepairDate(Date repairDate) {
         this.repairDate = repairDate;
     }
 
