@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity(name = "seleCourse")
-public class seleCourse implements Serializable {
+public class seleCourse  implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int selid;
@@ -60,5 +60,10 @@ public class seleCourse implements Serializable {
 
     public void setScore(float score) {
         this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
