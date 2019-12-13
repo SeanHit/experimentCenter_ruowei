@@ -2,12 +2,8 @@ package com.sean.backend.controller;
 
 //import com.sean.backend.dao.StudentDao;
 //import com.sean.backend.dao.Student_courseDao;
-import com.sean.backend.dao.TestDao;
-import com.sean.backend.entity.userModule.RolePriv;
 //import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+
 //import net.sf.json.JSONObject;
 //@Controller
 //@ResponseBody

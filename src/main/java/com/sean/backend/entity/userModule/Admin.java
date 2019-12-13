@@ -1,17 +1,17 @@
 package com.sean.backend.entity.userModule;
 
-import org.joda.time.DateTime;
+import com.sean.backend.Result.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity(name="Admin")
-public class Admin implements Serializable {
+public class Admin extends Data implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(length = 30)
-    private String leaderid;
+    private String adminid;
     private String name;
     private String password;
     @Temporal(TemporalType.TIMESTAMP)
@@ -23,12 +23,12 @@ public class Admin implements Serializable {
     @JoinColumn(name="roleid")
     private Role role;
 
-    public String getLeaderid() {
-        return leaderid;
+    public String getAdminid() {
+        return adminid;
     }
 
-    public void setLeaderid(String leaderid) {
-        this.leaderid = leaderid;
+    public void setAdminid(String adminid) {
+        this.adminid = adminid;
     }
 
     public String getName() {

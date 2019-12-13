@@ -1,13 +1,13 @@
 package com.sean.backend.entity.userModule;
 
-import org.joda.time.DateTime;
+import com.sean.backend.Result.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity(name="Leader")
-public class Leader implements Serializable {
+public class Leader extends Data implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(length = 30)

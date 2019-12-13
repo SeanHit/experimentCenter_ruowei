@@ -3,19 +3,6 @@ package com.sean.backend.controller;
 
 //import com.sean.backend.dao.StudentDao;
 //import com.sean.backend.entity.Student;
-import com.sean.backend.dao.TestDao;
-import com.sean.backend.entity.userModule.Role;
-import jdk.nashorn.internal.ir.RuntimeNode;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.net.ssl.SSLEngine;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 //@Controller
 ////@ResponseBody

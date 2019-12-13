@@ -1,14 +1,14 @@
 package com.sean.backend.entity.userModule;
 
 
-import org.joda.time.DateTime;
+import com.sean.backend.Result.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity(name="Student")
-public class Student implements Serializable {
+public class Student extends Data implements Serializable {
     @Id
     @Column(length = 30)
     private String studentid;
