@@ -5,7 +5,6 @@ import com.sean.backend.entity.userModule.Admin;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,5 +16,9 @@ public class AdminService {
     //@Transactional
     public List<Admin> getAll(){
        return adminDao.findAll();
+   }
+
+   public Optional<Admin> findById(String id){
+        return adminDao.findById(id);
    }
 }

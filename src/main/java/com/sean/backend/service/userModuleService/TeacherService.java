@@ -1,7 +1,6 @@
 package com.sean.backend.service.userModuleService;
 
 import com.sean.backend.dao.userModule.TeacherDao;
-import com.sean.backend.entity.userModule.Student;
 import com.sean.backend.entity.userModule.Teacher;
 import org.springframework.stereotype.Service;
 
