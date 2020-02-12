@@ -9,7 +9,6 @@ import java.util.Date;
 @Entity(name="Admin")
 public class Admin extends Data implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(length = 30)
     private String adminid;
     private String name;

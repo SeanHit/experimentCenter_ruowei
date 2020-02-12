@@ -17,10 +17,7 @@ public class Role {
     private Date joinDate;
     private String extrainfo;
 
-//    @ManyToMany(fetch= FetchType.LAZY,targetEntity=Privilege.class)
-////    @JoinTable(name = "role_priv", joinColumns = @JoinColumn(name = "roleid",referencedColumnName="roleid") ,
-////            inverseJoinColumns = @JoinColumn(name = "privid",referencedColumnName="privid"))
-//    private Set<Privilege> privileges = new HashSet<Privilege>();
+
 
     public int getRoleid() {
         return roleid;
@@ -56,11 +53,5 @@ public class Role {
         this.extrainfo = extrainfo;
     }
 
-//    public Set<Privilege> getPrivileges() {
-//        return privileges;
-//    }
-//
-//    public void setPrivileges(Set<Privilege> privileges) {
-//        this.privileges = privileges;
-//    }
+
 }
